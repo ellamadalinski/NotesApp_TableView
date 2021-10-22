@@ -16,16 +16,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableViewOutlet: UITableView!
     @IBOutlet weak var textFieldOutlet: UITextField!
     
+    let defaults = UserDefaults.standard
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         tableViewOutlet.delegate = self
         tableViewOutlet.dataSource = self
-        
+        if let mov = defaults.object(forKey: "myMovies"){
+            movies = mov as! [String]
+        }
     }
 
 
+    @IBAction func saveAction(_ sender: UIBarButtonItem) {
+        defaults.set(movies, forKey: "myMovies")
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies.count

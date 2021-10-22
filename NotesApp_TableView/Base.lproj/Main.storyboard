@@ -58,6 +58,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="caB-wS-mvo">
                         <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="ovf-bg-Iff">
+                            <connections>
+                                <action selector="saveAction:" destination="BYZ-38-t0r" id="sPf-l5-Wwb"/>
+                            </connections>
+                        </barButtonItem>
                         <textField key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Movie" textAlignment="center" minimumFontSize="17" id="zzf-AT-9Tm">
                             <rect key="frame" x="122.66666666666669" y="5" width="145" height="34"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
